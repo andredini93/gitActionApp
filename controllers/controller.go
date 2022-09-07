@@ -15,13 +15,6 @@ func Saudacoes(c *gin.Context) {
 	})
 }
 
-func Saudacoesdois(c *gin.Context) {
-	nome := c.Params.ByName("nome")
-	c.JSON(200, gin.H{
-		"API diz": "E ai " + nome + ", Tudo beleza?",
-	})
-}
-
 func TodosAlunos(c *gin.Context) {
 	var alunos []models.Aluno
 	database.DB.Find(&alunos)
