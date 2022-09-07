@@ -23,7 +23,7 @@ jobs:
         go-version: ${{ matrix.go_version }}
  
     - name: Log-Secret
-      run: echo ${{secret.CHAVE_INICIAL}}
+      run: echo ${{secrets.CHAVE_INICIAL}}
       
     - name: Build-DB
       run: docker-compose build
